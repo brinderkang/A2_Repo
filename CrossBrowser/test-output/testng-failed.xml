@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BPO]" parallel="tests">
+  <test name="Run on Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="ParallelBrowser">
+        <methods>
+          <include name="Create_PrintProduct"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- ParallelBrowser -->
+    </classes>
+  </test> <!-- Run on Firefox(failed) -->
+  <test name="Run on IE(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="ParallelBrowingIE">
+        <methods>
+          <include name="LaunchBrowser"/>
+          <include name="Create_PrintProduct"/>
+        </methods>
+      </class> <!-- ParallelBrowingIE -->
+    </classes>
+  </test> <!-- Run on IE(failed) -->
+  <test name="Run on Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ParallelBrowsingChrome">
+        <methods>
+          <include name="Testone"/>
+          <include name="LaunchBrowser"/>
+          <include name="Create_PrintProduct"/>
+        </methods>
+      </class> <!-- ParallelBrowsingChrome -->
+    </classes>
+  </test> <!-- Run on Chrome(failed) -->
+</suite> <!-- Failed suite [BPO] -->
